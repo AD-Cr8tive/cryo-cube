@@ -1,41 +1,163 @@
-
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عرشیا موگویی</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cruo Cube</title>
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
   <style>
     body {
-      font-family: 'Vazirmatn', sans-serif;
-      background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-      color: white;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #001f3f, #4b0082);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .logo-placeholder {
+      width: 150px;
+      height: 150px;
+      
+     
+      border-radius: 20px;
+      margin: 40px auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    h2 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .info a {
+      display: block;
+      margin: 5px 0;
+      color: #aadfff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .info a:hover {
+      color: #fff;
+    }
+
+    .skills {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #e0e0ff;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #ccc;
+      margin-top: 8px;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-4">
-  <!-- لوگو -->
-  <img src="logo.png" alt="Cryo Cube Logo" class="w-24 mb-4">
+<body>
 
-  <!-- عکس پروفایل -->
-  <img src="profile.jpg" alt="Arshia Mogoyi" class="w-32 h-32 rounded-full border-4 border-cyan-400 shadow-lg mb-4">
-
-  <!-- نام -->
-  <h1 class="text-2xl font-bold text-cyan-300">عرشیا موگویی</h1>
-
-  <!-- عنوان شغلی -->
-  <p class="text-center mt-2 text-sm text-purple-200 max-w-xs">
-    بازی‌ساز - طراح سایت از ساده تا پیشرفته و 3D<br>
-    انجام تمامی کارهای گرافیکی - تزئینات غرفه و ایده‌پردازی
-  </p>
-
-  <!-- لینک‌ها -->
-  <div class="flex flex-col items-center gap-3 mt-6">
-    <a href="https://instagram.com/arshia_mogoyi" class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-4 py-2 rounded-full shadow-md hover:scale-105 transition">اینستاگرام من</a>
-    <a href="https://t.me/MrRicharder" class="bg-blue-500 px-4 py-2 rounded-full shadow-md hover:scale-105 transition">تلگرام من</a>
-    <a href="tel:09025923323" class="bg-green-500 px-4 py-2 rounded-full shadow-md hover:scale-105 transition">تماس با من</a>
+  <div class="logo-placeholder">
+    <img style="width: 250px; height:250px;" src="./logo.png" alt="logo">
   </div>
+
+  <div class="container">
+    <!-- نفر اول -->
+    <div class="card">
+      <img src="./arshia.jpg" alt="نفر اول" class="avatar">
+      <h2>Arshia</h2>
+      <div class="info">
+        <div class="info-label">اینستاگرام:</div>
+        <a href="https://instagram.com/arshia_mogoyi" target="_blank">@arshia_mogoyi</a>
+        <div class="info-label">تلگرام:</div>
+        <a href="https://t.me/MrRicharder" target="_blank">@MrRicharder</a>
+        <div class="info-label">شماره تماس:</div>
+        <a href="tel:09025923323">09025923323</a>
+      </div>
+      <div class="skills">
+        بازی‌ساز، طراح سایت ساده تا پیشرفته و سه‌بعدی<br>
+        گرافیست حرفه‌ای، ایده‌پرداز
+      </div>
+    </div>
+
+    <!-- نفر دوم -->
+    <div class="card">
+      <img src="./dani.jpg" alt="نفر دوم" class="avatar">
+      <h2>Danial</h2>
+      <div class="info">
+        <div class="info-label">اینستاگرام:</div>
+        <a href="https://instagram.com/__danial_alinejad__" target="_blank">@__danial_alinejad__</a>
+        <div class="info-label">تلگرام:</div>
+        <a href="https://t.me/danial_alinejad" target="_blank">@danial_alinejad</a>
+        <div class="info-label">شماره تماس:</div>
+        <a href="tel:09101422120">09101422120</a>
+      </div>
+      <div class="skills">
+               بازی‌سازی از سطح ساده تا پیشرفته
+      </div>
+    </div>
+
+    <!-- نفر سوم -->
+    <div class="card">
+      <img src="./iliya.jpg" alt="نفر سوم" class="avatar">
+      <h2>Iliya</h2>
+      <div class="info">
+        <div class="info-label">اینستاگرام:</div>
+        <a href="https://instagram.com/iliypinkman" target="_blank">@iliypinkman</a>
+        <div class="info-label">تلگرام:</div>
+        <a href="https://t.me/FindThe_truth" target="_blank">@FindThe_truth</a>
+        <div class="info-label">شماره تماس:</div>
+        <a href="tel:09109722213">09109722213</a>
+      </div>
+      <div class="skills">
+        برنامه‌نویسی پایتون، طراحی سایت
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
